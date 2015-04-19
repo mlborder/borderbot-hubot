@@ -7,6 +7,12 @@
 request = require 'request'
 numeral = require 'numeral'
 moment  = require 'moment'
+INFLUXDB_HOST = process.env.HUBOT_INFLUXDB_HOST
+INFLUXDB_PORT = process.env.HUBOT_INFLUXDB_PORT
+INFLUXDB_USER = process.env.HUBOT_INFLUXDB_USER
+INFLUXDB_PASS = process.env.HUBOT_INFLUXDB_PASS
+INFLUXDB_DATABASE = process.env.HUBOT_INFLUXDB_DATABASE
+INFLUXDB_SERIES = process.env.HUBOT_INFLUXDB_SERIES
 
 getBorder = (msg, rank = 1200) ->
   encoded_query = encodeURIComponent("SELECT * FROM \"#{INFLUXDB_SERIES}\" ORDER DESC LIMIT 1")
