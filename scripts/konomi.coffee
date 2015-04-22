@@ -17,6 +17,7 @@ module.exports = (robot) ->
     patterns = [
       'おはようプロデューサー。今日も一日、セクシーに行くわよ！'
       'おはよう！'
+      'おはようございます、プロデューサー！'
     ]
     humanSaying res, res.random(patterns)
 
@@ -35,13 +36,19 @@ module.exports = (robot) ->
     ]
     humanSaying res, res.random(patterns)
 
+  robot.respond /.*応援(くだ|下)さい.*/i, (res) ->
+    humanSaying res, '応援するよ！'
+
+  robot.respond /今日もビビッと(パーフェクト|Perfect)?.*/i, (res) ->
+    res_text = if res.match[1]? then '' else 'パーフェクト！ '
+    res_text += 'イェイ！'
+    humanSaying res, res_text
+
   robot.respond /.*(綺麗|キレイ|きれい).*/i, (res) ->
     patterns = [
       'フフ、ありがとっ♪'
       'ふ、不意打ちで綺麗って言うのはやめてってば。レディにも心の準備ってものがあるんだからね！'
-      'お客様ね……フフッ。今宵、禁断の宴にようこそ……。素敵な夜が過ごせるよう、もてなしてあげるわ。'
       '大人をからかうのは、良くないぞっ。……え？からかってないの？て、照れるでしょ、バカ……'
-      'プロデューサーが見せてくれた景色、ずっと忘れないだろうな。昔の私には、見えなかったものがたくさんあって……身長は関係ないわよ！ウフフ'
     ]
     humanSaying res, res.random(patterns)
 
@@ -55,10 +62,10 @@ module.exports = (robot) ->
     humanSaying res, res.random(patterns)
 
   robot.respond /(M・I・X|Ｍ・Ｉ・Ｘ)/i, (res) ->
-    patterns = [
-      'N・U・T・S！'
-    ]
-    humanSaying res, res.random(patterns)
+    humanSaying res, 'N・U・T・S！'
+
+  robot.respond /.*(ママ|カレー).*/i, (res) ->
+    humanSaying res, 'は～い､このみママが愛情をこめた､ミリオンカレーができたわよ～！'
 
   robot.respond /.*セクシー.*/i, (res) ->
     patterns = [
@@ -68,7 +75,6 @@ module.exports = (robot) ->
       'こらこらプロデューサー、視線がやらしーぞっ♪'
       'うっふん♪アイドルとして一皮剥けたかしら？これからは、よりアダルトに攻めていくわよ！'
       'せっかくのセクシー衣装なのに、チョコが足りなくて前に出られないじゃない、プロデューサー！ほらっ､梱包も私がやるから｡ファンを待たせちゃダメ！'
-      'は～い､このみママが愛情をこめた､ミリオンカレーができたわよ～！'
     ]
     humanSaying res, res.random(patterns)
 
@@ -105,7 +111,7 @@ module.exports = (robot) ->
     ]
     humanSaying res, res.random(patterns)
 
-  robot.respond /.*(このみん|このみーん|このみ〜ん).*/i, (res) ->
+  robot.respond /.*このみ(ー|〜)?ん.*/i, (res) ->
     patterns = [
       '真美ちゃん、違う。あなたは亜美ちゃんね'
       'フフッ、じゃれつかないの真美ちゃん！ウフフ'
@@ -114,6 +120,16 @@ module.exports = (robot) ->
 
   robot.respond /.*(このみ姉さん).*/i, (res) ->
     patterns = [
+      '「今年も浮いた話ゼロだね」なんて、失礼しちゃうわ！そりゃ、あったって断るけど……アイドルですし？'
       '莉緒ちゃん、起きて。飲み直すわよ！'
+      '莉緒ちゃん！'
+    ]
+    humanSaying res, res.random(patterns)
+
+  robot.respond /.*(このみ|(姐|姉|ねえ)さん).*/i, (res) ->
+    patterns = [
+      'どうしたの、プロデューサー？'
+      'お客様ね……フフッ。今宵、禁断の宴にようこそ……。素敵な夜が過ごせるよう、もてなしてあげるわ。'
+      'プロデューサーが見せてくれた景色、ずっと忘れないだろうな。昔の私には、見えなかったものがたくさんあって……身長は関係ないわよ！ウフフ'
     ]
     humanSaying res, res.random(patterns)
