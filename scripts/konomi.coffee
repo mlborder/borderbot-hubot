@@ -29,6 +29,12 @@ module.exports = (robot) ->
     ]
     humanSaying res, res.random(patterns)
 
+  robot.respond /(行|い)ってきます.*/i, (res) ->
+    humanSaying res, 'いってらっしゃ〜い'
+
+  robot.respond /ただいま.*/i, (res) ->
+    humanSaying res, 'おかえりなさい！'
+
   robot.respond /.*(慰めて|なぐさめて).*/i, (res) ->
     patterns = [
       'プロデューサーが体張っていると、心配でたまらないのよね'
@@ -66,6 +72,9 @@ module.exports = (robot) ->
 
   robot.respond /.*(ママ|カレー).*/i, (res) ->
     humanSaying res, 'は～い､このみママが愛情をこめた､ミリオンカレーができたわよ～！'
+
+  robot.respond /.*(酌|酒).*/i, (res) ->
+    humanSaying res, '🍶'
 
   robot.respond /.*セクシー.*/i, (res) ->
     patterns = [
