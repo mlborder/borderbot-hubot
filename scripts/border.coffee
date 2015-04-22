@@ -28,7 +28,7 @@ getBorder = (msg, rank = 1200) ->
       t = moment(new Date(body[0]['points'][0][time_index]))
       pt_index = body[0]['columns'].indexOf("border_#{rank}")
       pt_value = body[0]['points'][0][pt_index]
-      str = "#{t.format('MM月DD日 HH:mm')}での#{rank}位のボーダーは#{numeral(pt_value).format('0,0')}ptよ、プロデューサー！"
+      str = "#{t.format('MM月DD日 HH:mm')}での#{rank}位のボーダーは#{numeral(pt_value).format('0,0')}ptよ、プロデューサー！" if pt_value?
     msg.send(str)
 
 module.exports = (robot) ->
