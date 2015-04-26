@@ -1,4 +1,5 @@
 [
   "hubot-heroku-keepalive",
+  "hubot-konomin-bot",
   "hubot-redis-brain"
 ]
