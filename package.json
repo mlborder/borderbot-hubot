@@ -12,7 +12,7 @@
     "moment": "^2.10.2",
     "numeral": "^1.5.3",
     "request": "^2.55.0",
-    "hubot-konomin-bot": ">0.0.0"
+    "hubot-konomin-bot": "git://github.com/millimas/hubot-konomin-bot.git"
   },
   "engines": {
     "node": "0.10.x"
