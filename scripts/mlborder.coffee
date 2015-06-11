@@ -29,7 +29,7 @@ getBorder = (msg, rank = 1200) ->
       pt_index = body[0]['columns'].indexOf("border_#{rank}")
       pt_value = body[0]['points'][0][pt_index]
       str = "#{t.format('MM月DD日 HH:mm')}での#{rank}位のボーダーは#{numeral(pt_value).format('0,0')}ptよ、プロデューサー！" if pt_value?
-    msg.send(str)
+    msg.reply str
 
 module.exports = (robot) ->
   robot.respond /ボーダー/i, (msg) ->
