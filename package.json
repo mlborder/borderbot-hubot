@@ -9,7 +9,6 @@
     "hubot-heroku-keepalive": "0.0.4",
     "hubot-konomin-bot": "git://github.com/millimas/hubot-konomin-bot.git",
     "hubot-redis-brain": "0.0.2",
-    "hubot-twitter": "git://github.com/MathildeLemee/hubot-twitter.git",
     "hubot-twitter-userstream": "0.0.3",
     "moment": "^2.10.2",
     "numeral": "^1.5.3",
